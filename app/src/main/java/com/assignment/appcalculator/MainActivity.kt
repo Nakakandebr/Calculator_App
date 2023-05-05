@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var btnSubtract: Button
     lateinit var btnMultiply: Button
     lateinit var btnDivide: Button
-    lateinit var tvAnswer: TextView
+    lateinit var tvResult: TextView
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,35 +32,35 @@ class MainActivity : AppCompatActivity() {
         btnSubtract = findViewById(R.id.btnSubtract)
         btnMultiply = findViewById(R.id.btnMultiply)
         btnDivide = findViewById(R.id.btnDivide)
-        tvAnswer = findViewById(R.id.tvAnswer)
+        tvResult = findViewById(R.id.tvResult)
 
         btnAdd.setOnClickListener {
             val num1 = etFirstInput.text.toString().toInt()
             val num2 = etSecondInput.text.toString().toInt()
-            val finalAnswer = num1 + num2
-            tvAnswer.text = "Answer: $finalAnswer"
+            val finalResult = num1 + num2
+            tvResult.text = "Answer: $finalResult"
         }
 
         btnSubtract.setOnClickListener {
             val num1 = etFirstInput.text.toString().toInt()
             val num2 = etSecondInput.text.toString().toInt()
-            val finalAnswer = num1 - num2
-            tvAnswer.text = "Answer: $finalAnswer"
+            val finalResult = num1 - num2
+            tvResult.text = "Answer: $finalResult"
 
         }
 
         btnMultiply.setOnClickListener {
             val num1 = etFirstInput.text.toString().toInt()
             val num2 = etSecondInput.text.toString().toInt()
-            val finalAnswer = num1 * num2
-            tvAnswer.text = "Result: $finalAnswer"
+            val finalResult = num1 * num2
+            tvResult.text = "Result: $finalResult"
         }
 
         btnDivide.setOnClickListener {
             val num1 = etFirstInput.text.toString().toInt()
             val num2 = etSecondInput.text.toString().toInt()
-            val finalAnswer = num1 % num2
-            tvAnswer.text = "Result: $finalAnswer"
+            val finalResult = num1 % num2
+            tvResult.text = "Result: $finalResult"
         }
 
 
